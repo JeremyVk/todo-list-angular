@@ -1,0 +1,20 @@
+h1 {
+    text-align: center;
+
+    margin: 5vh 0;
+    color: white;
+    text-shadow: 1px 0 0 black;
+}
+
+.todo-form-container {
+    margin-bottom: 5px;
+}
+
+.todo-list-container {
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 15%;
+    width: 70vw;
+    padding-top: 5px;
+}

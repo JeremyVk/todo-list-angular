@@ -1,0 +1,28 @@
+<div class='todo-item-container'>
+    <div class="todo-content {{ todo.completed ? 'todo-completed' : ''}}">
+        <p *ngIf="!isEditing">{{ todo.content }}</p>
+        <form action="#" method="POST" #todoItemForm="ngForm" (ngSubmit)="updateContent()" *ngIf="isEditing">
+            <input type="text"  [(ngModel)]="todo.content" name="todo.content">
+        </form>
+        
+    </div>
+    <div class="buttons">
+        <div class="todo-button-complete">
+            <form action="#" method="POST" #todoItemForm="ngForm" (ngSubmit)="sendCompletedTodo()">
+                <button>Compléter</button>
+            </form>
+        </div>
+        <div class="todo-button-delete">
+            <form action="#" method="POST" #todoItemForm="ngForm" (ngSubmit)="deleteTodo({ todo })">
+                <button>Supprimer</button>
+            </form>
+        </div>
+        <div class="todo-button-delete">   
+                <button on-click="toggleIsEditing()">Modifier</button>
+        </div>
+
+    </div>
+
+</div>
+
+

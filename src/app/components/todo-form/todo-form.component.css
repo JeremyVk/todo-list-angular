@@ -1,0 +1,22 @@
+input, button {
+    padding: 10px;
+    border: none;
+}
+input {
+width: 30vw;
+}
+
+input:focus{
+    outline: none;
+    box-shadow: 0 0 10px #719ECE;
+}
+
+.input {
+    text-transform: capitalize;
+}
+
+button {
+    background-color: white;
+    border: 1px solid black;
+    width: 150px;
+}

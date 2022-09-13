@@ -1,0 +1,12 @@
+<h1>Todos</h1>
+<div class="todo-form-container">
+    <app-todo-form (todoCreated)="todoAdded($event)"></app-todo-form>
+</div>
+
+<div class="todo-list-container">
+    <ul>
+        <div *ngFor="let todo of allTodos">
+            <app-todo-item [todo]='todo'(todoDeleted)="getTodos()"></app-todo-item>
+        </div>
+    </ul>    
+</div>

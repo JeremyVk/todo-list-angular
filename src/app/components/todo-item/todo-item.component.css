@@ -1,0 +1,32 @@
+.todo-completed {
+    text-decoration: line-through;
+}
+
+.todo-item-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border: 1px solid black;
+    margin: 20px 0;
+    background-color: aliceblue;
+    width: 100%;
+}
+.buttons {
+    display: flex;
+    justify-content: space-around;
+}
+.buttons form {
+    margin: 0 10px;
+}
+
+.buttons button {
+    padding: 5px;
+}
+
+.todo-content input {
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    width: 150%;
+}
