@@ -1,7 +1,8 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { Router } from '@angular/router';
-import { TodoServiceService } from 'src/app/services/TodoService/todo-service.service';
-import { Todo } from 'src/app/Interfaces/TodoInterface';
+import { TodoServiceService } from 'src/app/TodoModule/services/TodoService/todo-service.service';
+import { Todo } from 'src/app/TodoModule/Interfaces/TodoInterface';
+
 @Component({
   selector: 'app-todo-form',
   templateUrl: './todo-form.component.html',

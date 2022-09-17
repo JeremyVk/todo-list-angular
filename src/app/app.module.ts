@@ -6,23 +6,19 @@ import { RouterModule } from '@angular/router';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { TodoFormComponent } from './components/todo-form/todo-form.component';
-import { TodoListComponent } from './components/todo-list/todo-list.component';
-import { TodoItemComponent } from './components/todo-item/todo-item.component';
+import { TodoModule } from './TodoModule/todo/todo.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TodoFormComponent,
-    TodoListComponent,
-    TodoItemComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    RouterModule
+    RouterModule,
+    TodoModule
   ],
   providers: [],
   bootstrap: [AppComponent]

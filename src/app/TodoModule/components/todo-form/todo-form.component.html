@@ -1,0 +1,4 @@
+<form #todoForm="ngForm" (ngSubmit)="sendTodo()">
+    <input type="text" [(ngModel)]="todo.content" name="content" placeholder="Rentrez votre tache">
+    <button type="submit" [disabled]="todoForm.invalid">submit</button>
+</form>

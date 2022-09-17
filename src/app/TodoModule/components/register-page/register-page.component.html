@@ -1,0 +1,26 @@
+<h1>Register Page</h1>
+
+<form  [formGroup]="loginForm"  (ngSubmit)="sendUser()">
+    <label for="">Username</label>
+    <input type="text" [(ngModel)]="user.username" name="username" formControlName="username">
+
+    <label for="">Email</label>
+    <input  id="email-address" type="email" name="email" formControlName="email">
+    <div *ngIf="loginForm.get('username')?.dirty && loginForm.get('username')?.hasError('required')">Votre nom d'utilisateur est requis</div>
+    <div *ngIf="loginForm.get('username')?.dirty && loginForm.get('username')?.hasError('minlength')">Votre pseudo doit contenir au moins 5 caractères</div>
+
+
+    <!-- <div *ngIf="loginForm.get('email')?.hasError('email')">Votre email est requis</div> -->
+
+
+    <div *ngIf="loginForm.get('email')?.hasError('email')">Veuillez rentrer un email valide</div>
+    <div *ngIf="loginForm.get('email')?.touched && loginForm.get('email')?.hasError('required')">Votre email est requis</div>
+
+    <!-- <label for="">Password</label>
+    <input type="password" [(ngModel)]="user.password" name="user.password">
+
+    <label for="">Confirm Password</label>
+    <input type="password" [(ngModel)]="user.username" name="confirmPassword"> -->
+
+    <button type="submit" [disabled]="loginForm.invalid">Submit</button>
+</form>

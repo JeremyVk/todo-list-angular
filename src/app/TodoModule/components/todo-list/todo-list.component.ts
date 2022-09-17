@@ -1,6 +1,6 @@
 import { Component, Input, OnInit, SimpleChanges, ViewChild, ViewChildren } from '@angular/core';
-import { Todo } from 'src/app/Interfaces/TodoInterface';
-import { TodoServiceService } from 'src/app/services/TodoService/todo-service.service';
+import { Todo } from 'src/app/TodoModule/Interfaces/TodoInterface';
+import { TodoServiceService } from 'src/app/TodoModule/services/TodoService/todo-service.service';
 import { TodoItemComponent } from '../todo-item/todo-item.component';
 
 @Component({

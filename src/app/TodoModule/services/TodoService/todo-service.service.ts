@@ -1,14 +1,15 @@
 import { Injectable } from '@angular/core';
-import { Todo } from 'src/app/Interfaces/TodoInterface';
+import { Todo } from 'src/app/TodoModule/Interfaces/TodoInterface';
 import { HttpClient } from '@angular/common/http';
 import { map, Observable } from 'rxjs';
+import { environment } from 'src/environments/environment';
 
 
 @Injectable({
   providedIn: 'root'
 })
 export class TodoServiceService {
-  url: string = 'http://127.0.0.1:8000/api/todos';
+  url: string = environment.url;
   
   constructor(private httpClient: HttpClient) { }
 
@@ -23,10 +24,10 @@ export class TodoServiceService {
   }
 
   changeTodo(todo: any) {
-    return this.httpClient.put(this.url + '/' + todo.id, todo)
+    return this.httpClient.put(`${this.url}/${todo.id}`, todo)
   }
 
   deleteTodo(todo: any): Observable<ArrayBuffer> {
-    return this.httpClient.delete(this.url + '/' + todo.id, todo)
+    return this.httpClient.delete(`${this.url}/${todo.id}`, todo)
   }
 }
